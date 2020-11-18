@@ -7,8 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Minha Página';
-tarefas = [];
-tarefa ="";
-add(){}
+ tasks:Array<String> = [];
+task:String = "";
+add(){
+  this.tasks.push(this.task);
+  }
 
 }
