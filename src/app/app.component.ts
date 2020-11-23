@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import{ JsonService } from './jason.service';
+import{ JsonService } from './json.service';
 
 @Component({
   selector: 'app-root',
