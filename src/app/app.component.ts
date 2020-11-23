@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Minha Página';
 
   constructor(public json:JsonService){
-    this.json.getJson('https://fortnite-api.com/v2/shop/br').subscribe((res : any)=>{
+    this.json.getJson('https://fortnite-api.com/v2/shop/br/?language=pt-BR').subscribe((res : any)=>{
       console.log(res);
     })
 
