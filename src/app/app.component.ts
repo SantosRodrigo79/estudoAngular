@@ -17,12 +17,6 @@ export class AppComponent {
 
   }
 
- tasks:Array<String> = [];
-task:String = "";
-add(){
-  this.tasks.push(this.task);
-
-
   }
 
-}
+
