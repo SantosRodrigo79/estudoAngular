@@ -20,7 +20,11 @@ export class AppComponent {
       this.skins = res.data.featured.entries;
       this.skins.forEach(novasSkins => {
         this.skinsFiltradas = novasSkins.items[0].images.smallIcon;
-        console.log(this.skinsFiltradas);
+        let target = document.getElementById('target');
+        let newArrSkin = document.createElement("img");
+        newArrSkin.src = this.skinsFiltradas;
+        target?.appendChild(newArrSkin);
+
       })
 
     })
