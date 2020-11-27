@@ -7,7 +7,7 @@ import { JsonService } from './json.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Minha Página';
+  title = 'Fortnite Loja de Itens';
   data: string = '';
   skinsDestaque: Array<any> = [];
   skins: Array<any> = [];
