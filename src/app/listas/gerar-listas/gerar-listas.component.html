@@ -1,7 +1,11 @@
 <ul>
-    <li *ngFor = "skins of lojaDiaria">
+    <div *ngFor=" let skins of lojaDiaria">
+        
+        <img src="{{skins.images.smallIcon}}">
+        
+        </div>
 
-    </li>
+    
    
 </ul>
     
