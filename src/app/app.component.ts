@@ -14,7 +14,7 @@ export class AppComponent {
   
   
   constructor(public json: JsonService) {
-    this.json.getJson('https://fortnite-api.com/v2/shop/br/?language=pt-BR').subscribe((res: any) => {
+    this.json.getJson().subscribe((res: any) => {
       console.log(res);
       this.data = res.data.date;
 

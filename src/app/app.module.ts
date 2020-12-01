@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import{ HttpClientModule } from '@angular/common/http';
+import { GerarListasComponent } from './listas/gerar-listas/gerar-listas.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GerarListasComponent
   ],
   imports: [
     BrowserModule,
