@@ -23,18 +23,24 @@ export class GerarListasComponent implements OnInit {
   }
   getLoja(){
 this.lojaService.getJson().subscribe(skins=>{
+  if(skins.data.daily != null){
   this.lojaDiaria = skins.data.daily.entries[0].items;
   console.log(this.lojaDiaria);
+  }
   
 });
 
 this.lojaService.getJson().subscribe(skins=>{
+  if(skins.data.featured !=null){
   this.lojaDestaque = skins.data.featured.entries;
+  }
   
 });
 
 this.lojaService.getJson().subscribe(skins=>{
+  if(skins.data.specialFeatured !=null){
   this.lojaSpecial = skins.data.specialFeatured.entries;
+  }
   
 });
 
