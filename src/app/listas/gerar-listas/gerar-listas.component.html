@@ -1,18 +1,41 @@
-<title>Loja Diária</title>
-<div  style="background-color: royalblue; font-size: 52px; margin-left: 35%;" class="FortniteBlack">
-Loja Diária
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loja Diária</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0 , user-scalable=no" />
 
+</head>
+
+<body style="font-family: Fortnite; background: #1e1e1e; color: #ffffff; padding: 10px;">
+    <div style="margin-bottom :20px; font-size :48px;">
+
+<div>Loja Diária</div>
+     </div>
+              <div style="border-bottom:3px solid #ffffff; "></div>
+               <div style="margin-bottom: 20px; font-size: 48px;margin-top: 20px;">
+
+               <div>PAST ITEMS SHOP</div>
 </div>
-    <div  style="background-color: red;display: inline-block;" *ngFor=" let skins of lojaDiaria">
+
+
+
+
+
+    <div *ngFor=" let skins of lojaDiaria">
         
         <img src="{{skins.images.smallIcon}}">
      <span> {{skins.name}}</span>
         
         </div>
-        <div style="background-color: royalblue;" class="FortniteBlack">
+        <div  class="FortniteBlack">
         loja
         {{data|localDateTime}}
         </div>
+
+    </body>
+        </html>
+    
    
 
     

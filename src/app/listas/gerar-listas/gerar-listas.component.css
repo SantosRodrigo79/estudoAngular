@@ -1,0 +1,18 @@
+.FortniteBlack{
+    font-family: "Fortnite";
+}
+.rarity-fine{
+    background: #fb9625;
+}
+.rarity-quality{
+    background: #7907a5;
+}
+.rarity-sturdy{
+    background: #3dc7ff;
+}
+.rarity-handmade{
+    background: #5bad03;
+}
+a{
+    color: #e3e3e3;
+}
