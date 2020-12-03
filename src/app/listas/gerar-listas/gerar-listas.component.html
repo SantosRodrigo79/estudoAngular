@@ -12,18 +12,25 @@
     <div style="margin-bottom :20px; font-size :48px;">
                    <div>Loja Diária</div>
     </div>
-    <div style="width: 100%; color: #000;background: #f1ed62;font-size: 26px;display: inline-block;">
-        <div style="padding: 10px;">
+    
+    <div style="width: 100%; color: #000;background: #f1ed62;font-size: 26px;display: inline-block;" *ngFor=" let displayName of nomesLoja">
         
-        <div style="float:left"></div>
+        <div style="padding: 10px;">
+            
+        <div style="float:left" >{{displayName.nome}}</div>
         
         </div>
-
-
-     
-
     </div>
-    
+    <div style="margin-bottom: 20px;">
+        <ul style="list-style: none;margin: 0;text-align: center;" *ngFor=" let skins of lojaDiaria">
+            <li style="border: 3px solid #ffffff; display:inline-block; max-width: 200px;margin-top: 20px; margin-right: 20px;">
+                <a target="blank" ><img src="{{skins.images.smallIcon}}"></a>
+                <span> {{skins.name}}</span>
+            
+            </li>
+        </ul>
+    </div>
+
     <div style="border-bottom:3px solid #ffffff; "></div>
     <div style="margin-bottom: 20px; font-size: 48px;margin-top: 20px;">
 
@@ -33,15 +40,11 @@
 
 
 
-
  
     <div>
 
-        <div *ngFor=" let skins of lojaDiaria">
-            <img src="{{skins.images.smallIcon}}">
-            <span> {{skins.name}}</span>
-        </div>
-        loja
+       
+        
         {{data|localDateTime}}
     </div>
 
