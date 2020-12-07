@@ -14,9 +14,7 @@ export class GerarListasComponent implements OnInit {
   lojaDestaque:Loja[] = [];
   lojaSpecial:Loja[] = [];
   data:any;
-  diariaOrganizada:any;
-  apoio:any;
-
+  
   constructor(
   public  lojaService:JsonService
   ) { }

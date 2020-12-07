@@ -11,6 +11,9 @@ export class Loja {
     description:any;
     featured:any;
     regularPrice:any;
+    finalPrice:any;
+
+
     constructor(values:Object){
         Object.assign(this, values)
 

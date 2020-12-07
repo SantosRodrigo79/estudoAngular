@@ -10,30 +10,43 @@
 
 <body style="font-family: Fortnite; background: #1e1e1e; color: #ffffff; padding: 10px;">
     <div style="margin-bottom :20px; font-size :48px;">
-                   <div>Loja Diária</div>
+        <div>Loja Diária</div>
     </div>
-    
-    <div style="width: 100%; color: #000;background: #f1ed62;font-size: 26px;display: inline-block;" >
-       
+
+    <div style="width: 100%; color: #000;background: #f1ed62;font-size: 26px;display: inline-block;">
+
         <div style="padding: 10px;">
-           <span>Diária</span>
-            
-        <div style="float:left" ></div>
-        
+
+
+            <div style="float:left"> <span>Diária</span></div>
+
         </div>
-       
-     
     </div>
-    <div style="margin-bottom: 20px;" *ngFor="let nome of lojaDiaria">
-        
-        
+    <div style="margin-bottom: 20px;" *ngFor="let skins of lojaDiaria">
+
+
         <ul style="list-style: none;margin: 0;text-align: center; ">
-           <a target="blank">
-            {{nome.items[0].name}}
-          <img src="{{nome.items[0].images.smallIcon}}"  >
-           </a>
+            <li class="rarity-{{skins.items[0].rarity.value}}" style="border: 3px solid #ffffff;
+            display: inline-block; max-width: 200px;margin-top: 20px;">
+
+                <div style="position: relative;">
+
+                    <div style="position: absolute; background: rgba(0, 0, 0, 0.5);bottom: 0;width: 100%;">
+                        <div style="padding: 5px;">
+                            <div style="float: left;font-size: 20px; width: 100%;">
+                                <div>{{skins.items[0].name}}</div>
+                                <div style="font-size: 16px;">{{skins.finalPrice}} V-Bucks</div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <img style="width: 100%;display: block;" src="{{skins.items[0].images.smallIcon}}">
+                </div>
+
+            </li>
         </ul>
-        
+
     </div>
     <div style="border-bottom:3px solid #ffffff; "></div>
     <div style="margin-bottom: 20px; font-size: 48px;margin-top: 20px;">
@@ -44,11 +57,11 @@
 
 
 
- 
+
     <div>
 
-       
-        
+
+
         {{data|localDateTime}}
     </div>
 
