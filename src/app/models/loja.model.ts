@@ -10,6 +10,11 @@ export class Loja {
     smallIcon:any;
     description:any;
     featured:any;
+    regularPrice:any;
+    constructor(values:Object){
+        Object.assign(this, values)
+
+    }
 
 
 }

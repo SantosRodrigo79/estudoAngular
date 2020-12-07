@@ -14,7 +14,8 @@ export class GerarListasComponent implements OnInit {
   lojaDestaque:Loja[] = [];
   lojaSpecial:Loja[] = [];
   data:any;
-  nomesLoja :Array<any>= [];
+  diariaOrganizada:any;
+  apoio:any;
 
   constructor(
   public  lojaService:JsonService
@@ -26,12 +27,8 @@ export class GerarListasComponent implements OnInit {
   getLoja(){
 this.lojaService.getJson().subscribe(skins=>{
   if(skins.data.daily != null){
-  this.lojaDiaria = skins.data.daily.entries[0].items;
-  this.data = skins.data.date;
- this.nomesLoja = [{nome:skins.data.daily.name},{nome:skins.data.featured.name},{nome:skins.data.specialFeatured.name}]
-  console.log(this.nomesLoja)
-  console.log(this.lojaDiaria);
-  
+    this.lojaDiaria = skins.data.daily.entries;
+ 
   }
   
 });
@@ -39,7 +36,8 @@ this.lojaService.getJson().subscribe(skins=>{
 this.lojaService.getJson().subscribe(skins=>{
   if(skins.data.featured !=null){
   this.lojaDestaque = skins.data.featured.entries;
-  
+  this.data = skins.data.date;
+  console.log(this.lojaDiaria)
   }
 });
 
