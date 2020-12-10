@@ -13,6 +13,7 @@ export class GerarListasComponent implements OnInit {
   lojaDiaria: Loja[] = [];
   lojaDestaque:Loja[] = [];
   lojaSpecial:Loja[] = [];
+  todasLojas:Loja[] = [];
   data:any;
   
   constructor(
@@ -24,9 +25,11 @@ export class GerarListasComponent implements OnInit {
   }
   getLoja(){
 this.lojaService.getJson().subscribe(skins=>{
+  this.todasLojas = skins.data;
   if(skins.data.daily != null){
     this.lojaDiaria = skins.data.daily.entries;
  
+    console.log(this.todasLojas)
   }
   
 });

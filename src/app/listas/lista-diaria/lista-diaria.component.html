@@ -1,0 +1,27 @@
+<p>lista-diaria works!</p>
+<div style="margin-bottom: 20px; float: left;" *ngFor="let skins of lojaDiaria">
+
+
+    <ul style="list-style: none;margin: 0;text-align: center; ">
+        <li class="rarity-{{skins.items[0].rarity.value}}" style="border: 3px solid #ffffff;
+        display: inline-block; max-width: 200px;margin-top: 20px;">
+
+            <div style="position: relative; ">
+
+                <div style="position: absolute; background: rgba(0, 0, 0, 0.5);bottom: 0;width: 100%;">
+                    <div style="padding: 5px;">
+                        <div style="font-size: 20px; width: 100%;">
+                            <div>{{skins.items[0].name}}</div>
+                            <div style="font-size: 16px;">{{skins.finalPrice}} V-Bucks</div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <img style="width: 100%;display: block;" src="{{skins.items[0].images.smallIcon}}">
+            </div>
+
+        </li>
+    </ul>
+
+</div>
