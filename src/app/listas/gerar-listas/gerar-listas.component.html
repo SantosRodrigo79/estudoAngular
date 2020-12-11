@@ -18,29 +18,41 @@
         <div style="padding: 10px;">
 
 
-            <div style="float:left">Diário {{data|localDateTime}}</div>
+            <div style="float:left">Diário           {{data|localDateTime}}</div>
             
 
         </div>
     </div>
 
     <app-lista-diaria [diaria]="lojaDiaria"></app-lista-diaria>
+    <div style="border-bottom:3px solid #ffffff;"></div>
 
     <div style="width: 100%; color: #000;background: #f1ed62;font-size: 26px;display: inline-block;">
 
         <div style="padding: 10px;">
 
 
-            <div style="float:left">Loja {{data|localDateTime}}</div>
+            <div style="float:left">Destaque</div>
             
 
         </div>
     </div>
-
-
-    
+    <app-lista-destaque [destaque]="lojaDestaque"></app-lista-destaque>
     <div style="border-bottom:3px solid #ffffff;"></div>
+
+
+    <div style="width: 100%; color: #000;background: #f1ed62;font-size: 26px;display: inline-block;">
+
+        <div style="padding: 10px;">
+
+
+            <div style="float:left">Especial </div>
+            
+
+        </div>
+    </div>
     <div style="margin-bottom: 20px; font-size: 48px;margin-top: 20px;">
+        <div style="border-bottom:3px solid #ffffff;"></div>
 
     </div>
 </body>
